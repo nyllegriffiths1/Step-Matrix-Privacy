@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Matrix - Privacy Policy</title>
+    <meta name="description" content="Step Matrix Privacy Policy - We don't collect any of your data. Your health information stays private and secure on your device.">
+    
+    <!-- Cyberpunk styling -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #00ffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Cyberpunk grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #00ffff;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #00ffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid #00ffff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(0, 255, 255, 0.1);
+            text-shadow: 0 0 5px #00ffff;
+        }
+
+        /* Main content */
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ff00ff;
+            text-shadow: 0 0 20px #ff00ff;
+        }
+
+        .tldr-section {
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid #00ffff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .tldr-section h2 {
+            color: #00ffff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .tldr-text {
+            font-size: 1.3rem;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .meta-info {
+            text-align: center;
+            margin: 2rem 0;
+            color: #888;
+        }
+
+        .privacy-sections {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .privacy-card {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border: 1px solid #ff00ff;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 0, 255, 0.2);
+        }
+
+        .privacy-card h3 {
+            color: #ff00ff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .privacy-card p {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-card strong {
+            color: #00ffff;
+        }
+
+        .privacy-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .privacy-list li {
+            color: #ffffff;
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .privacy-list li::before {
+            content: '▶';
+            color: #00ffff;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Special styling for different list types */
+        .dont-list li::before {
+            content: '❌';
+        }
+
+        .check-list li::before {
+            content: '✅';
+        }
+
+        .tech-list li::before {
+            content: '⚡';
+        }
+
+        /* Contact section */
+        .contact-section {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid #00ffff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .contact-section h3 {
+            color: #00ffff;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section a {
+            color: #ff00ff;
+            text-decoration: none;
+        }
+
+        .contact-section a:hover {
+            text-shadow: 0 0 5px #ff00ff;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid #00ffff;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .privacy-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Glitch effect */
+        .glitch {
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translateX(0); }
+            10% { transform: translateX(-2px) skew(-5deg); }
+            20% { transform: translateX(2px) skew(5deg); }
+            30% { transform: translateX(-1px); }
+            40% { transform: translateX(1px); }
+            50% { transform: translateX(-2px); }
+            60% { transform: translateX(2px); }
+            70% { transform: translateX(-1px); }
+            80% { transform: translateX(1px); }
+            90% { transform: translateX(-2px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo glitch">STEP MATRIX</a>
+                <a href="https://nyllegriffiths1.github.io/Step-Matrix-Site/" class="back-link">← Back to Main Site</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Privacy Policy</h1>
+            
+            <div class="meta-info">
+                <p><strong>Last Updated:</strong> January 2025</p>
+                <p><strong>Effective Date:</strong> App Launch</p>
+            </div>
+
+            <div class="tldr-section">
+                <h2>🚀 TL;DR (Too Long; Didn't Read)</h2>
+                <p class="tldr-text">We don't collect any of your data. Period.<br>
+                Your health information stays on your device where it belongs.</p>
+            </div>
+
+            <div class="privacy-sections">
+                <div class="privacy-card">
+                    <h3>🛡️ Data Collection</h3>
+                    <p><strong>We collect ZERO personal data.</strong></p>
+                    <p>Step Matrix does not collect, store, transmit, or share any personal information. No user accounts, no cloud storage, no tracking, no analytics.</p>
+                    <p>When we say "no data collection," we mean it literally. There are no servers, no databases, no user profiles. Nothing.</p>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>🏥 Health Data Usage</h3>
+                    <p><strong>Your health data stays on YOUR device.</strong></p>
+                    <ul class="privacy-list">
+                        <li><strong>What we access:</strong> Steps, walking/running distance, flights climbed, active calories burned</li>
+                        <li><strong>Why we access it:</strong> To display your fitness progress, calculate XP points, and unlock achievements</li>
+                        <li><strong>Where it goes:</strong> Nowhere. It stays on your iPhone in the Health app</li>
+                        <li><strong>Who else sees it:</strong> Nobody. Only you can see your health data</li>
+                        <li><strong>How long we keep it:</strong> We don't "keep" anything - it's always yours in Apple Health</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>🚫 What We DON'T Do</h3>
+                    <ul class="privacy-list dont-list">
+                        <li>Create user accounts or require registration</li>
+                        <li>Transmit any data to servers or cloud services</li>
+                        <li>Use analytics, crash reporting, or usage tracking</li>
+                        <li>Display advertisements or use ad networks</li>
+                        <li>Share data with third parties (there's nothing to share)</li>
+                        <li>Track your location or movements</li>
+                        <li>Access your contacts, photos, or other personal data</li>
+                        <li>Use cookies, pixels, or web beacons</li>
+                        <li>Employ A/B testing or user behavior analysis</li>
+                        <li>Store data in external databases or cloud platforms</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>📱 How Your Data Works</h3>
+                    <p><strong>Everything happens locally on your device:</strong></p>
+                    <ul class="privacy-list">
+                        <li>Your iPhone's Health app collects step data from motion sensors</li>
+                        <li>Step Matrix reads this data with your explicit permission</li>
+                        <li>We calculate XP, levels, and achievement progress locally</li>
+                        <li>All app settings and progress save to your device storage only</li>
+                        <li>Delete the app = all Step Matrix data disappears (Health data stays in Apple Health)</li>
+                        <li>Switch phones? Your Health data transfers with iCloud, achievements restart fresh</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>🔔 Notifications (Optional)</h3>
+                    <p><strong>Reminders are optional and handled by iOS:</strong></p>
+                    <ul class="privacy-list">
+                        <li>Daily motivation messages (only if you enable them)</li>
+                        <li>Achievement celebration alerts</li>
+                        <li>Goal progress reminders</li>
+                        <li>Streak protection notifications</li>
+                        <li>All notifications processed by iOS - no external services</li>
+                        <li>Disable anytime in Settings → Notifications</li>
+                        <li>No tracking of notification interactions</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>⚖️ Legal Compliance</h3>
+                    <p><strong>We follow all privacy laws and regulations:</strong></p>
+                    <ul class="privacy-list check-list">
+                        <li>GDPR compliant (EU) - No data collection means no compliance issues</li>
+                        <li>CCPA compliant (California) - Nothing to sell or share</li>
+                        <li>PIPEDA compliant (Canada) - Your data stays in Canada if you're Canadian</li>
+                        <li>HIPAA friendly - Health data never leaves your device</li>
+                        <li>Apple HealthKit guidelines - Strict adherence to health data rules</li>
+                        <li>iOS App Store privacy requirements - Full transparency</li>
+                        <li>Children's privacy (COPPA) - Safe for all ages, no data collected</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>🔄 Data Rights & Control</h3>
+                    <p><strong>Your data, your rules:</strong></p>
+                    <ul class="privacy-list">
+                        <li><strong>Access:</strong> View all your data in Apple Health app anytime</li>
+                        <li><strong>Export:</strong> Export your health data through Apple Health</li>
+                        <li><strong>Delete:</strong> Remove Step Matrix access in Health app settings</li>
+                        <li><strong>Portability:</strong> Your data follows you across devices via iCloud</li>
+                        <li><strong>Correction:</strong> Modify data in Apple Health (Step Matrix reflects changes)</li>
+                        <li><strong>Opt-out:</strong> Simply delete the app - no accounts to close</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>🛠️ Technical Implementation</h3>
+                    <p><strong>For the technically curious:</strong></p>
+                    <ul class="privacy-list tech-list">
+                        <li>Local SQLite database for app preferences and achievement progress</li>
+                        <li>iOS UserDefaults for simple settings (goal targets, notification preferences)</li>
+                        <li>HealthKit framework for secure health data access</li>
+                        <li>No network stack, HTTP clients, or API integrations</li>
+                        <li>No third-party SDKs for analytics, ads, or tracking</li>
+                        <li>No crash reporting or error collection services</li>
+                        <li>No background location services or continuous monitoring</li>
+                        <li>Code compiled locally, no remote code execution</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>🔐 Security Measures</h3>
+                    <p><strong>How we protect your privacy:</strong></p>
+                    <ul class="privacy-list">
+                        <li>No servers means no server breaches</li>
+                        <li>No accounts means no password leaks</li>
+                        <li>HealthKit encryption handled by iOS</li>
+                        <li>App data protected by iOS app sandboxing</li>
+                        <li>No network transmissions means no interception risks</li>
+                        <li>Regular security updates through App Store</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>👶 Children's Privacy</h3>
+                    <p><strong>Safe for young cyber-warriors:</strong></p>
+                    <ul class="privacy-list">
+                        <li>No personal information collected from users of any age</li>
+                        <li>No chat features or social interactions</li>
+                        <li>No user-generated content or sharing capabilities</li>
+                        <li>Promotes healthy activity habits for all ages</li>
+                        <li>Parental controls managed through iOS Screen Time</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>🔄 Policy Updates</h3>
+                    <p><strong>How we handle changes:</strong></p>
+                    <ul class="privacy-list">
+                        <li>Policy updates posted here with new "Last Updated" date</li>
+                        <li>Significant changes communicated through app updates</li>
+                        <li>Continued app use constitutes acceptance of updates</li>
+                        <li>Previous versions archived for transparency</li>
+                        <li>Email notifications for major policy changes (if you contact us)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h3>📞 Privacy Questions?</h3>
+                <p>Have questions about privacy, data usage, or this policy?</p>
+                <p><strong>Email:</strong> <a href="mailto:privacy@stepmatrix.app">privacy@stepmatrix.app</a></p>
+                <p><strong>Support:</strong> <a href="mailto:support@stepmatrix.app">support@stepmatrix.app</a></p>
+                <p>We typically respond within 24 hours.</p>
+                
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,255,255,0.3);">
+                    <p><strong>Developer Contact Information:</strong></p>
+                    <p>Step Matrix is developed by an independent developer committed to user privacy.</p>
+                    <p>This policy reflects our core belief that your health data should remain private and under your control.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Step Matrix. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; color: #666;">Your health data stays private and secure on your device.</p>
+            <p style="margin-top: 1rem;"><a href="index.html" style="color: #00ffff;">← Back to Main Site</a></p>
+        </div>
+    </footer>
+
+    <!-- Interactive effects -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Random glitch effect on logo
+            const logo = document.querySelector('.logo');
+            setInterval(() => {
+                if (Math.random() < 0.1) {
+                    logo.classList.add('glitch');
+                    setTimeout(() => logo.classList.remove('glitch'), 500);
+                }
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
