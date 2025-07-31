@@ -281,27 +281,28 @@
 
             <div class="tldr-section">
                 <h2>🚀 TL;DR (Too Long; Didn't Read)</h2>
-                <p class="tldr-text">We don't collect any of your data. Period.<br>
-                Your health information stays on your device where it belongs.</p>
+                <p class="tldr-text">We only collect anonymous step counts for leaderboards.<br>
+                Your personal health information stays on your device where it belongs.</p>
             </div>
 
             <div class="privacy-sections">
                 <div class="privacy-card">
                     <h3>🛡️ Data Collection</h3>
-                    <p><strong>We collect ZERO personal data.</strong></p>
-                    <p>Step Matrix does not collect, store, transmit, or share any personal information. No user accounts, no cloud storage, no tracking, no analytics.</p>
-                    <p>When we say "no data collection," we mean it literally. There are no servers, no databases, no user profiles. Nothing.</p>
+                    <p><strong>We collect minimal, anonymous data for leaderboards only.</strong></p>
+                    <p><strong>What we collect:</strong> Anonymous step counts and system-generated user IDs for global leaderboard rankings.</p>
+                    <p><strong>What we DON'T collect:</strong> Names, emails, personal information, location data, or any identifiable health data.</p>
+                    <p>Your anonymous leaderboard ID (like "USER_ABC123") cannot be traced back to you personally.</p>
                 </div>
 
                 <div class="privacy-card">
                     <h3>🏥 Health Data Usage</h3>
-                    <p><strong>Your health data stays on YOUR device.</strong></p>
+                    <p><strong>Your personal health data stays on YOUR device.</strong></p>
                     <ul class="privacy-list">
                         <li><strong>What we access:</strong> Steps, walking/running distance, flights climbed, active calories burned</li>
-                        <li><strong>Why we access it:</strong> To display your fitness progress, calculate XP points, and unlock achievements</li>
-                        <li><strong>Where it goes:</strong> Nowhere. It stays on your iPhone in the Health app</li>
-                        <li><strong>Who else sees it:</strong> Nobody. Only you can see your health data</li>
-                        <li><strong>How long we keep it:</strong> We don't "keep" anything - it's always yours in Apple Health</li>
+                        <li><strong>Why we access it:</strong> To display your fitness progress, calculate XP points, unlock achievements, and enable leaderboard competition</li>
+                        <li><strong>Where it goes:</strong> Personal health data stays on your iPhone. Only daily step counts shared anonymously for leaderboards</li>
+                        <li><strong>Who else sees it:</strong> Nobody can see your personal health data. Only anonymous step counts appear on leaderboards</li>
+                        <li><strong>How long we keep it:</strong> Step counts stored temporarily for leaderboard rankings. Personal health data always yours in Apple Health</li>
                     </ul>
                 </div>
 
@@ -309,28 +310,43 @@
                     <h3>🚫 What We DON'T Do</h3>
                     <ul class="privacy-list dont-list">
                         <li>Create user accounts or require registration</li>
-                        <li>Transmit any data to servers or cloud services</li>
+                        <li>Collect names, emails, or personal identifiers</li>
                         <li>Use analytics, crash reporting, or usage tracking</li>
                         <li>Display advertisements or use ad networks</li>
-                        <li>Share data with third parties (there's nothing to share)</li>
+                        <li>Share data with third parties for marketing/advertising</li>
                         <li>Track your location or movements</li>
                         <li>Access your contacts, photos, or other personal data</li>
                         <li>Use cookies, pixels, or web beacons</li>
                         <li>Employ A/B testing or user behavior analysis</li>
-                        <li>Store data in external databases or cloud platforms</li>
+                        <li>Link leaderboard data back to your real identity</li>
                     </ul>
                 </div>
 
                 <div class="privacy-card">
                     <h3>📱 How Your Data Works</h3>
-                    <p><strong>Everything happens locally on your device:</strong></p>
+                    <p><strong>Most data processing happens locally on your device:</strong></p>
                     <ul class="privacy-list">
                         <li>Your iPhone's Health app collects step data from motion sensors</li>
                         <li>Step Matrix reads this data with your explicit permission</li>
-                        <li>We calculate XP, levels, and achievement progress locally</li>
-                        <li>All app settings and progress save to your device storage only</li>
-                        <li>Delete the app = all Step Matrix data disappears (Health data stays in Apple Health)</li>
-                        <li>Switch phones? Your Health data transfers with iCloud, achievements restart fresh</li>
+                        <li>XP, levels, and achievement progress calculated locally on your device</li>
+                        <li>Anonymous step counts sent to secure database for leaderboard rankings only</li>
+                        <li>System generates anonymous ID (like "USER_ABC123") for leaderboard display</li>
+                        <li>All personal app settings and progress save to your device storage only</li>
+                        <li>Delete the app = all local Step Matrix data disappears, leaderboard entry becomes inactive</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-card">
+                    <h3>🏆 Global Leaderboards</h3>
+                    <p><strong>Anonymous competition with cyber-warriors worldwide:</strong></p>
+                    <ul class="privacy-list">
+                        <li><strong>Data shared:</strong> Daily step counts only - no personal health metrics</li>
+                        <li><strong>Identity protection:</strong> System-generated anonymous IDs (e.g., "USER_ABC123")</li>
+                        <li><strong>No linking:</strong> Leaderboard data cannot be traced back to your real identity</li>
+                        <li><strong>Secure transmission:</strong> Step data encrypted during transmission to our servers</li>
+                        <li><strong>Data retention:</strong> Step counts stored for leaderboard rankings, no long-term personal profiles</li>
+                        <li><strong>Opt-out:</strong> Delete the app to stop participating in leaderboards</li>
+                        <li><strong>No social features:</strong> No messaging, friend lists, or social interactions</li>
                     </ul>
                 </div>
 
@@ -382,11 +398,12 @@
                         <li>Local SQLite database for app preferences and achievement progress</li>
                         <li>iOS UserDefaults for simple settings (goal targets, notification preferences)</li>
                         <li>HealthKit framework for secure health data access</li>
-                        <li>No network stack, HTTP clients, or API integrations</li>
+                        <li>Secure HTTPS API for leaderboard data transmission only</li>
+                        <li>Anonymous user ID storage in iOS Keychain for security</li>
                         <li>No third-party SDKs for analytics, ads, or tracking</li>
                         <li>No crash reporting or error collection services</li>
                         <li>No background location services or continuous monitoring</li>
-                        <li>Code compiled locally, no remote code execution</li>
+                        <li>Encrypted data transmission with certificate pinning</li>
                     </ul>
                 </div>
 
@@ -394,11 +411,13 @@
                     <h3>🔐 Security Measures</h3>
                     <p><strong>How we protect your privacy:</strong></p>
                     <ul class="privacy-list">
-                        <li>No servers means no server breaches</li>
+                        <li>Anonymous user IDs stored securely in iOS Keychain</li>
                         <li>No accounts means no password leaks</li>
                         <li>HealthKit encryption handled by iOS</li>
                         <li>App data protected by iOS app sandboxing</li>
-                        <li>No network transmissions means no interception risks</li>
+                        <li>Encrypted HTTPS transmission for leaderboard data only</li>
+                        <li>Certificate pinning prevents man-in-the-middle attacks</li>
+                        <li>Minimal data collection reduces breach impact</li>
                         <li>Regular security updates through App Store</li>
                     </ul>
                 </div>
